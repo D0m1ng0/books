@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   notes                                              :+:      :+:    :+:   */
+/*   fosef_getchar_to_putchar.c                         :+:      :+:    :+:   */
 /*                                                                            */
 /*                                                                            */
 /*                                                                            */
@@ -10,16 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-GENERAL INTRODUCTION
+/*COPy INPUT to OUTPUT: similar to ECHO
+**read a character
+**while the charater is different from newline
+**	print the character just read
+**	read a character
+*/
 
-	foset_clesius_to_fahr
+#include <stdio.h>
 
-printf does not belongs to C language, but is defined in the stadard ANSI
+void	fosef_getchar_to_putchar(void)
+{
+	char	c;
 
-	- %(3)(.)(2)(d)(f) prints a number in a field of 3 characters and with two decimanl numbers after the "."
-	- %o prints the ottale
-	- %x prints the hexadecimal
-	- %s prints the string of characters
-	- %% prints the same
+	c = getchar();
+	while (c != EOF)
+	{
+		putchar(c);
+		c = getchar();
+	}
+}
 
-#define	NAME	value, is the same then declare constants inside a function
+int	main(void)
+{
+	fosef_getchar_to_putchar();
+	return (0);
+}
