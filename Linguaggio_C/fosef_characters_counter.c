@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                                            */
-/*   fosef_getchar_to_putchar.c                         :+:      :+:    :+:   */
+/*   fosef_charcters_counter.c                          :+:      :+:    :+:   */
 /*                                                                            */
 /*                                                                            */
 /*                                                                            */
@@ -10,29 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*COPY INPUT to OUTPUT: similar to ECHO
-**read a character
-**while the charater is different from newline
-**	print the character just read
-**	read a character
+/*
+**counts the characters
 */
 
+#include <unistd.h>
 #include <stdio.h>
 
-void	fosef_getchar_to_putchar(void)
+void	fosef_characters_counter(void)
 {
-	char	c;
+	long	nbr_chars_long;
+	double	nbr_chars_double;
 
-	c = getchar();
-	while (c != EOF)
+	nbr_chars_long = 0;
+	nbr_chars_double = 0;
+	while (getchar() != EOF)
 	{
-		putchar(c);
-		c = getchar();
+		++nbr_chars_long;
+		printf("the number in long is %ld\n", nbr_chars_long);
+		++nbr_chars_double;
+		printf("the number in double is %f\n", nbr_chars_double);
+		printf("%%.0f erase the decimal part\n");
+		printf("the number in double is %.0f\n", nbr_chars_double);
+		getchar();
 	}
 }
 
 int	main(void)
 {
-	fosef_getchar_to_putchar();
+	fosef_characters_counter();
 	return (0);
 }
