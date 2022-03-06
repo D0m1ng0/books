@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-void	foset_lines_counter(void)
+void	fosef_lines_counter(void)
 {
 	int	c;
 	int	lines_counter;

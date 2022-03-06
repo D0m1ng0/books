@@ -58,4 +58,6 @@ write -a- means 65.
 it is a single character.
 "\n" is a constant string which contains only one character.
 
+	void	fosef_lines_counter(void);
+	void	fosef_substitution_with_t_b_slash(void);
 ################################################################################
